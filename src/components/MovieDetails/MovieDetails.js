@@ -24,13 +24,14 @@ export default class MovieDetails extends Component {
   handleBack = () => {
     const { state } = this.props.location;
     if (state && state.from) {
-     return this.props.history.push(state.from);
+      return this.props.history.push(state.from);
     }
     this.props.history.push(routes.home);
   };
 
   render() {
     const { movie } = this.state;
+    const fromState = this.props.location.state;
     return (
       <section className={styles.container}>
         {movie && (
@@ -70,7 +71,10 @@ export default class MovieDetails extends Component {
                 <li>
                   <Link
                     className={styles.add_info__link}
-                    to={`/movies/${this.props.match.params.movieId}/cast`}
+                    to={{
+                      pathname:`/movies/${this.props.match.params.movieId}/cast`,
+                      state: fromState,
+                    }}
                   >
                     Cast
                   </Link>
@@ -78,7 +82,10 @@ export default class MovieDetails extends Component {
                 <li>
                   <Link
                     className={styles.add_info__link}
-                    to={`/movies/${this.props.match.params.movieId}/review`}
+                    to={{
+                      pathname:`/movies/${this.props.match.params.movieId}/review`,
+                      state: fromState,
+                    }}
                   >
                     Reviews
                   </Link>
