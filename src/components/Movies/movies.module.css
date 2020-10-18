@@ -1,0 +1,33 @@
+.container{
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(38, 159, 235);
+    align-items: center;
+}
+
+.movies_list{
+    list-style: none;
+}
+
+.movie_list__item{
+    position: relative;
+
+}
+.movie_list__item:before{
+    content: '✔';
+    position: absolute; top: 0; left: 0;
+    color: yellow;
+}
+
+.movie_list__item__link{
+    padding-left: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.movie_list__item__link:hover,
+.movie_list__item__link:focus{
+    text-decoration: underline;
+}

@@ -1,0 +1,41 @@
+.container{
+    margin: 0 auto;
+    padding: 10px;
+    background-color: rgb(38, 159, 235);
+}
+
+.back_btn{
+    background-color: rgb(251, 255, 28);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.movie_img{
+    width: 300px;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.movie_container{
+    display: flex;
+}
+
+.add_info{
+    color: whitesmoke;
+}
+
+.add_info__list{
+    list-style: none;
+}
+
+.add_info__link{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.add_info__link:hover,
+.add_info__link:focus{
+    text-decoration: underline;
+}
